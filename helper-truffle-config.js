@@ -28,6 +28,18 @@ const networkConfig = {
         keepersUpdateInterval: "30",
         subId: "52", // add your subscription Id here!
     },
+    polygon: {
+        chainId: "80001",
+        linkToken: "0x326C977E6efc84E512bB9C30f76E30c160eD06FB",
+        ethUsdPriceFeed: "0x0715A7794a1dc8e42615F059dD6e406A6594651A",
+        keyHash: "0x28f190a5869273c1fd385f672f5d65c7cd17b239ee80dd48505386c8792b6377",
+        oracle: "0x40193c8518BB267228Fc409a613bDbD8eC5a97b3",
+        jobId: "7d80a6386ef543a3abb52817f6707e3b",
+        fee: "100000000000000000",
+        fundAmount: "100000000000000000", // 0.1
+        keepersUpdateInterval: "30",
+        // subId: "52", // add your subscription Id here!
+    },
     rinkeby: {
         chainId: "4",
         linkToken: "0x01be23585060835e02b77ef475b0cc51aa1e0709",

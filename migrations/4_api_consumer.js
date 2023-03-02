@@ -15,6 +15,7 @@ module.exports = async function (deployer, network, accounts) {
         linkTokenAddress = linkToken.address
         oracle = mockOracle.address
     } else {
+        console.log(networkConfig[network])
         linkTokenAddress = networkConfig[network]["linkToken"]
         oracle = networkConfig[network]["oracle"]
     }

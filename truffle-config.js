@@ -26,6 +26,8 @@ const privateKey = process.env.PRIVATE_KEY
 const ganachePrivateKeys = ["0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d"]
 const GOERLI_RPC_URL =
     process.env.GOERLI_RPC_URL || "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+const POLYGON_RPC_URL =
+    process.env.POLYGON_RPC_URL
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || ""
 //
 // const fs = require('fs');
@@ -57,6 +59,15 @@ module.exports = {
         goerli: {
             provider: () => new HDWalletProvider(privateKey, GOERLI_RPC_URL),
             network_id: 5, // Goerli's id
+            confirmations: 1, // # of confirmations to wait between deployments. (default: 0)
+            timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
+            skipDryRun: true, // Skip dry run before migrations? (default: false for public nets ),
+            networkCheckTimeout: 10000,
+            timeoutBlocks: 200
+        },
+        polygon: {
+            provider: () => new HDWalletProvider(privateKey, POLYGON_RPC_URL),
+            network_id: 80001, // Goerli's id
             confirmations: 1, // # of confirmations to wait between deployments. (default: 0)
             timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
             skipDryRun: true, // Skip dry run before migrations? (default: false for public nets ),

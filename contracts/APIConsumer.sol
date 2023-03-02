@@ -38,9 +38,9 @@ contract APIConsumer is ChainlinkClient {
     ) {
         
         setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
-        setChainlinkOracle(0xC4881C30d43B18A93EBE773F184BF03008fb41CB);
-        oracle = 0x6d5298954f79a5587DF637E4c81482f48A66159E;
-        jobId = "fa6ba415320e4077b0e2aa9dbd2f7816";
+        setChainlinkOracle(0x67372e81F122ae5E5012FD7B099F0174B5d72a78);
+        oracle = 0x67372e81F122ae5E5012FD7B099F0174B5d72a78;
+        jobId = "a3d4e7081ef348f7a1345481522d3e5a";
         fee = _fee;
     }
 
