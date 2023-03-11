@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:black;
+  align-items: center;
+  justify-content: center;
+}
+/* body:hover{
+  background-color: rgb(9, 9, 9);
+  transition: 2s;
+  text-shadow: 1pc;
+} */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  color:white;
+  /* box-shadow: 2px 2.5px 3px 3px rgb(243, 241, 241); */
+  opacity: 0.4;
+}
+header .logo h5{
+  font-size: 30px ;
+  color: rgb(234, 233, 234);
+  padding-right: 320px;
+  padding-bottom: 30px;
+  transition: 0.3s;
+  padding-top: 38px;
+  
+}
+
+header .logo h5:hover{
+  color: rgb(46, 155, 183);
+  font-size: 40px;
+  text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px rgb(141, 202, 202),
+      0 0 80px rgb(27, 241, 241),
+      0 0 90px rgb(37, 202, 202),
+      0 0 700px rgb(3, 239, 239),
+      0 0 120px rgb(110, 204, 204);
+}
+
+header .logo img{
+
+  margin-top: 40px;
+  height: 60px;
+  width: 60px;
+  color: rgb(228, 228, 228);
+  border-radius: 90px;
+  padding-top: 12px;
+}
+header .logo img:hover{
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  padding-top: 13px;
+  
+}
+header .display-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.display-menu .menu{
+  padding: 2px 15px;
+  text-decoration: none;
+  color:white;
+  font-size: 20px;
+  transition: 0.4s;
+  font-weight: 500 ;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  /* box-shadow: 0 0 10px 0 #f6ee06 inset,
+              0 0 10px 4px #04f75d; */
+  margin: 18px 18px 18px 18px;
+}
+.display-menu .menu:hover{
+  text-decoration: solid;
+  font-size: 22px;
+  color: rgb(15, 13, 13);
+  text-shadow: 2x 2px 0px 0px 
+  white;
+  background-color: rgb(254, 251, 253);
+  border:2px solid white;
+  box-shadow: 0 0 10px 0 rgb(253, 252, 253) inset,
+              0 0 10px 4px rgb(253, 245, 253);
+  border-radius: 30px;
+  
+}
+.display-menu .menu:hover > :not(:hover){
+  opacity: 0.6;
+
+}

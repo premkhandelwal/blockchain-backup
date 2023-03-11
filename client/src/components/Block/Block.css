@@ -1,0 +1,22 @@
+.block{
+    height: 150px;
+    border: 2px solid black;
+    overflow-x: auto;
+    /* overflow-y: auto; */
+}
+
+.block{
+    padding: 9px 9px 9px 9px;
+    border: 2px solid black;
+    margin: 22px 22px 22px 22px ;
+    border-radius: 1px;
+    background-color: rgb(245, 254, 248);
+    
+
+}
+.block:hover{
+    background-color: rgb(218, 215, 218);
+    text-shadow: 5px solid;
+    transition: 2s;
+    text-size-adjust: 2px;
+}
