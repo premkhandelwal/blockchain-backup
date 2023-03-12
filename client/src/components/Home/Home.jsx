@@ -26,7 +26,7 @@ function Home() {
   return (
     <>
       {excelData ? (
-        <HashComponent bHash={excelData} eHash={excelData}></HashComponent>
+        <HashComponent bHash={excelData}></HashComponent>
       ): (
         <div>
           <div className="content">

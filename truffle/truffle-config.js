@@ -82,10 +82,10 @@ module.exports = {
     provider: () => new HDWalletProvider(privateKey, GOERLI_RPC_URL),
     network_id: 5, // Goerli's id
     confirmations: 1, // # of confirmations to wait between deployments. (default: 0)
-    timeoutBlocks: 2000, // # of blocks before a deployment times out  (minimum/default: 50)
+    timeoutBlocks: 20000000000, // # of blocks before a deployment times out  (minimum/default: 50)
     skipDryRun: true, // Skip dry run before migrations? (default: false for public nets ),
     networkCheckTimeout: 100000000,
-    timeoutBlocks: 2000
+    timeoutBlocks: 2000000000
 },
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
