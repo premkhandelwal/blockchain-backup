@@ -21,7 +21,7 @@ export default function HashComponent(props) {
       // var contact = contract.new(abi,{from: web3.eth.accounts[0], data: bc});
       await contract.methods
         .requestVolumeData()
-        .send({ from: accounts[0], gas: 1500000 })
+        .send({ from: accounts[0], gas: 300000 })
       console.log('Started Brum bum')
       await delay(10000)
 
@@ -31,6 +31,12 @@ export default function HashComponent(props) {
     } catch (error) {
       console.log(error)
     }
+  }
+
+  const readData = async ()=>{
+    const value = await contract.methods.read().call({ from: accounts[0] })
+      console.log(value)
+      setValue(value)
   }
 
   const tryInit = async () => {
@@ -58,7 +64,9 @@ export default function HashComponent(props) {
           <NoticeNoArtifact />
         ) : !state.contract ? (
           <NoticeWrongNetwork />
-        ) : value === "?" ? (
+        ) :value === "" ? 
+        <button onClick={readData}>readData()</button> :
+        value === "?" ? (
           <button onClick={requestVolumeData}>requestVolumeData()</button>
         ) : (
           <span className="neon">{value}</span>
