@@ -54,6 +54,8 @@ const privateKey = process.env.PRIVATE_KEY
 const ganachePrivateKeys = ["0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d"]
 const GOERLI_RPC_URL =
     process.env.GOERLI_RPC_URL || "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+const SEPOLIA_RPC_URL =
+    process.env.SEPOLIA_RPC_URL || "https://eth-goerli.alchemyapi.io/v2/your-api-key"
     console.log(process.env.GOERLI_RPC_URL);
 const POLYGON_RPC_URL =
     process.env.POLYGON_RPC_URL
@@ -81,6 +83,15 @@ module.exports = {
   goerli: {
     provider: () => new HDWalletProvider(privateKey, GOERLI_RPC_URL),
     network_id: 5, // Goerli's id
+    confirmations: 1, // # of confirmations to wait between deployments. (default: 0)
+    timeoutBlocks: 20000000000, // # of blocks before a deployment times out  (minimum/default: 50)
+    skipDryRun: true, // Skip dry run before migrations? (default: false for public nets ),
+    networkCheckTimeout: 100000000,
+    timeoutBlocks: 2000000000
+},
+  sepolia: {
+    provider: () => new HDWalletProvider(privateKey, SEPOLIA_RPC_URL),
+    network_id: 11155111, // Goerli's id
     confirmations: 1, // # of confirmations to wait between deployments. (default: 0)
     timeoutBlocks: 20000000000, // # of blocks before a deployment times out  (minimum/default: 50)
     skipDryRun: true, // Skip dry run before migrations? (default: false for public nets ),

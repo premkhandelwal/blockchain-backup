@@ -12,7 +12,7 @@ contract APIConsumer is ChainlinkClient {
 
     string public volume;
     address private immutable oracle;
-    string  private  jobId;
+    string private jobId;
     uint256 private immutable fee;
 
     event DataFullfilled(string volume);
@@ -36,11 +36,10 @@ contract APIConsumer is ChainlinkClient {
         uint256 _fee,
         address _link
     ) {
-        
-        setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
-        setChainlinkOracle(0xDB444e07031C4cc5E071Df2E402fF9c92B5c8Bff);
-        oracle = 0xDB444e07031C4cc5E071Df2E402fF9c92B5c8Bff;
-        jobId = "33a1986f48ea43249284c50366ad4276";
+        setChainlinkToken(0x779877A7B0D9E8603169DdbD7836e478b4624789);
+        setChainlinkOracle(0x3016e3b55bF31cC50E78933Fb536efD2B29ed3bE);
+        oracle = 0x3016e3b55bF31cC50E78933Fb536efD2B29ed3bE;
+        jobId = "c3c788ba52ba4ee387eeef344d77c793";
         fee = _fee;
     }
 
@@ -86,16 +85,16 @@ contract APIConsumer is ChainlinkClient {
      * @param _requestId - id of the request
      * @param _volume - response; requested 24h trading volume of ETH in USD
      */
-    function fulfill(bytes32 _requestId, string memory _volume)
-        public
-        recordChainlinkFulfillment(_requestId)
-    {
+    function fulfill(
+        bytes32 _requestId,
+        string memory _volume
+    ) public recordChainlinkFulfillment(_requestId) {
         volume = _volume;
         emit DataFullfilled(volume);
     }
 
     function read() public view returns (string memory) {
-    return volume;
+        return volume;
     }
 
     /**

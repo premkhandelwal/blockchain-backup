@@ -28,6 +28,19 @@ const networkConfig = {
         keepersUpdateInterval: "30",
         subId: "52", // add your subscription Id here!
     },
+    sepolia: {
+        chainId: "11155111",
+        linkToken: "0x779877A7B0D9E8603169DdbD7836e478b4624789",
+        ethUsdPriceFeed: "0x694AA1769357215DE4FAC081bf1f309aDC325306",
+        keyHash: "0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c",
+        vrfCoordinator: "0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625",
+        oracle: "0x3016e3b55bF31cC50E78933Fb536efD2B29ed3bE",
+        jobId: "c3c788ba52ba4ee387eeef344d77c793",
+        fee:        "11000000000000000",
+        fundAmount: "11000000000000000", // 0.1
+        keepersUpdateInterval: "30",
+        subId: "52", // add your subscription Id here!
+    },
     polygon: {
         chainId: "80001",
         linkToken: "0x326C977E6efc84E512bB9C30f76E30c160eD06FB",
