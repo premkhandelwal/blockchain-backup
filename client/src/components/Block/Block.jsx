@@ -9,11 +9,11 @@ function Block(props) {
   return (
     <div className="block">
       
-      {props.block.map(transaction => (
+      <Item transactionHash={props.transactionHash} transactionData={props.transactionData}/>
+      {/* {props.block.map(transaction => (
         
-        <Item name={transaction.title} description={transaction.Description}/>
          
-      ))}
+      ))} */}
       <h1>Block</h1>
     </div>
   );
