@@ -44,6 +44,7 @@ export default function HashComponent(props) {
   }
   useEffect(() => {
     tryInit()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value])
 
   return (
@@ -52,14 +53,14 @@ export default function HashComponent(props) {
         className="HashCodeBlockChain"
         style={{ color: props.bHash === value ? 'green' : 'red' }}
       >
-        <h3 style={{ color: 'white' }}>B.HASH</h3>
+        <h3 style={{ color: 'white' }}>E.HASH</h3>
         <span className="neon"> {props.bHash}</span>
       </div>
       <div
         className="HashCodeExcel"
         style={{ color: props.bHash === value ? 'green' : 'red' }}
       >
-        <h3 style={{ color: 'white' }}>E.HASH</h3>
+        <h3 style={{ color: 'white' }}>B.HASH</h3>
         {!state.artifact ? (
           <NoticeNoArtifact />
         ) : !state.contract ? (

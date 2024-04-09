@@ -51,7 +51,6 @@ require("dotenv").config()
 
 const privateKey = process.env.PRIVATE_KEY
 // These are the keys auto-generated from running `ganache -d`
-const ganachePrivateKeys = ["0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d"]
 const GOERLI_RPC_URL =
     process.env.GOERLI_RPC_URL || "https://eth-goerli.alchemyapi.io/v2/your-api-key"
 const SEPOLIA_RPC_URL =
@@ -88,6 +87,16 @@ module.exports = {
     skipDryRun: true, // Skip dry run before migrations? (default: false for public nets ),
     networkCheckTimeout: 100000000,
     timeoutBlocks: 2000000000
+},
+polygon: {
+  provider: () => new HDWalletProvider(privateKey, POLYGON_RPC_URL),
+  network_id: 80001,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true,
+      networkCheckTimeout: 9000000,
+      pollingInterval: 1800000,
+      disableConfirmationListener: true
 },
   sepolia: {
     provider: () => new HDWalletProvider(privateKey, SEPOLIA_RPC_URL),

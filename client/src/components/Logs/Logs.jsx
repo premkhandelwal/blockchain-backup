@@ -25,10 +25,13 @@ const Logs = () => {
           {visible ? 'Hide Transaction' : 'Display Transaction'}
         </button>
       </div>
+      <div className="logs" style={{"width": "200%", "display": "grid"}}>
       {visible ?[...transactionMap].map(([transactionHash, transactionData]) => (
         <Block key={transactionHash} transactionHash={transactionHash} transactionData = {transactionData} />
          
         )): <div />}
+      </div>
+      
       {/* {visible ? BlockData.map((block) => <Block transactionHash={transactionHash} transactionData = {transactionData}  />) : <div />} */}
     </div>
   )
